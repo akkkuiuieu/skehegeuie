@@ -1,0 +1,61 @@
+{
+
+    "name": "Antiban",
+
+    "description": "Download videos from various websites using this telegram bot",
+
+    "repository": "",
+    "buildpacks":[
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        },
+        {
+            "url": "https://github.com/amivin/aria2-heroku.git"
+        },
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "keywords": [
+
+       
+
+        "telegram bot",
+
+        "pyrogram"
+
+    ],
+  "env": {
+    "OTHER_INSTALLS": {
+      "description": "If you need install packages for running your app(Python is pre-installed).[Space in between each package]",
+      "value": "None",
+      "required": false
+    },
+    "REPO_URL": {
+      "description": "URL of the REPO that you want to deploy.",
+      "value": ""
+    },
+    "PYTHON_FILE": {
+      "description": "Name of the python file that you need to run. [use -m if you need to run __main__.py from a folder]",
+      "value": ""
+    },
+     "OTHER_CMD": {
+      "description": "If you need to run any bash command other than python specify here",
+      "value": "None",
+      "required": false
+    }
+  },
+  "buildpacks": [
+
+        {
+
+            "url": "heroku/python"
+
+        },
+       {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+       }
+       
+    ]
+
+}
